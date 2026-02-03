@@ -18,5 +18,19 @@ A modern, responsive, and accessible frontend website built using HTML, CSS, and
 
 ## Setup Instructions
 
+This project is built using plain HTML, CSS, and JavaScript.
+No framework or build tool is required.
+
+Method 1: Run Locally (Recommended)
+Download or clone the repository:
+git clone <repository-url>
+
+Folder Structure
+
+/project-root
+
+├── index.html ├── style.css ├── app.js
+
 
 The Website is Live on : https://celebrated-pixie-467d5a.netlify.app/
+
