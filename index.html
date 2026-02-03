@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daly College, Indore - Shaping Leaders Since 1882">
+    <title>Daly College, Indore - Live. Learn. Lead.</title>
+   
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+   
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+   
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+
+
+    <!-- Header / Navigation -->
+    <header class="header" role="banner">
+        <div class="container-full">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-square"></div>
+                    <div class="logo-text">
+                        <span class="logo-dc">DC</span>
+                        <span class="logo-name">DALY COLLEGE, INDORE</span>
+                    </div>
+                </div>
+               
+                <!-- Desktop Navigation -->
+                <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                    <ul class="nav-menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#admissions">Admission</a></li>
+                        <li><a href="#academics">Academics</a></li>
+                        <li><a href="#campus">Campus</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+               
+                <div class="header-actions">
+                    <a href="mailto:contact@dalycollege.org" class="contact-link" aria-label="Email contact">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                        <span>contact@dalycollege.org</span>
+                    </a>
+                   
+                    <a href="tel:+917312719000" class="contact-link" aria-label="Phone contact">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        <span>91 (0731) 2719000</span>
+                    </a>
+                   
+                    <button class="erp-login-btn" aria-label="ERP Login">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"/>
+                        </svg>
+                        ERP Login
+                    </button>
+                   
+                    <!-- Dark / Light Mode Toggle -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 13h2a1 1 0 000-2H2a1 1 0 000 2zm18 0h2a1 1 0 000-2h-2a1 1 0 000 2zM12 2a1 1 0 001-1V0a1 1 0 00-2 0v1a1 1 0 001 1zm0 18a1 1 0 001-1v-1a1 1 0 00-2 0v1a1 1 0 001 1zM5.64 4.22a1 1 0 00-1.41 1.41l.7.71a1 1 0 001.42-1.42l-.71-.7zm12.73 12.73a1 1 0 00-1.41 1.41l.7.71a1 1 0 001.42-1.42l-.71-.7zM4.22 18.36a1 1 0 001.42 0l.7-.71a1 1 0 00-1.41-1.41l-.71.7a1 1 0 000 1.42zm12.73-12.73a1 1 0 001.42 0l.7-.71a1 1 0 00-1.41-1.41l-.71.7a1 1 0 000 1.42z"/>
+                        </svg>
+                        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+
+
+                    <!-- Hamburger Menu -->
+                    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav">
+        <ul class="mobile-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#admissions">Admission</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#campus">Campus</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Main Content -->
+    <main>
+       
+        <!-- Hero Section with Video Background -->
+        <section class="hero" id="hero">
+            <!-- Video Background -->
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+           
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-word">Live.</span>
+                        <span class="hero-word">Learn.</span>
+                        <span class="hero-word">Lead.</span>
+                    </h1>
+                   
+                    <p class="hero-subtitle">Shaping Leaders Since 1882</p>
+                   
+                    <div class="hero-cta">
+                        <button class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"/>
+                            </svg>
+                            Explore Admissions
+                        </button>
+                        <button class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"/>
+                            </svg>
+                            Enquire Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Affiliations Section with Carousel -->
+        <section class="affiliations" id="affiliations">
+            <div class="container">
+                <h2 class="section-title">Affiliations</h2>
+               
+                <div class="affiliations-carousel">
+                    <button class="carousel-nav prev" aria-label="Previous affiliations">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                   
+                    <div class="affiliations-track">
+                        <div class="affiliation-item">
+                            <div class="affiliation-logo cbse">
+                                <div class="logo-circle">
+                                    <span>CBSE</span>
+                                </div>
+                            </div>
+                            <p>Central Board of Secondary Education</p>
+                        </div>
+                       
+                        <div class="affiliation-item">
+                            <div class="affiliation-logo ibdp">
+                                <div class="logo-rect">
+                                    <span>IB</span>
+                                    <small>Diploma Programme</small>
+                                </div>
+                            </div>
+                            <p>International Baccalaureate</p>
+                        </div>
+                       
+                        <div class="affiliation-item">
+                            <div class="affiliation-logo cambridge">
+                                <div class="logo-rect cambridge-bg">
+                                    <span>Cambridge</span>
+                                    <small>Assessment</small>
+                                </div>
+                            </div>
+                            <p>Cambridge International</p>
+                        </div>
+                       
+                        <div class="affiliation-item">
+                            <div class="affiliation-logo afs">
+                                <div class="logo-circle afs-bg">
+                                    <span>AFS</span>
+                                </div>
+                            </div>
+                            <p>American Field Service</p>
+                        </div>
+                       
+                        <div class="affiliation-item">
+                            <div class="affiliation-logo ipsc">
+                                <div class="logo-circle ipsc-bg">
+                                    <span>IPSC</span>
+                                </div>
+                            </div>
+                            <p>Indian Public Schools Conference</p>
+                        </div>
+                       
+                        <div class="affiliation-item">
+                            <div class="affiliation-logo ndsc">
+                                <div class="logo-circle ndsc-bg">
+                                    <span>NDSC</span>
+                                </div>
+                            </div>
+                            <p>National Digital Schools</p>
+                        </div>
+                       
+                        <div class="affiliation-item">
+                            <div class="affiliation-logo isa">
+                                <div class="logo-circle isa-bg">
+                                    <span>ISA</span>
+                                </div>
+                            </div>
+                            <p>International School Award</p>
+                        </div>
+                    </div>
+                   
+                    <button class="carousel-nav next" aria-label="Next affiliations">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About & Stats Section -->
+        <section class="about-stats" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- About Daly College -->
+                    <div class="about-card">
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop" alt="Daly College Historic Building" loading="lazy">
+                        </div>
+                        <h3>About Daly College</h3>
+                        <p>The new building was inaugurated on November 14, 1885 by the Viceroy, Lord Dufferin. By 1891 the Holkars of Indore and the Scindias of Gwalior donated the two student houses.</p>
+                        <p>In 1905 Sir Henry's Son, Sir Hugh Daly, was appointed as the first Principal.</p>
+                    </div>
+
+
+                    <!-- Stats Card -->
+                    <div class="stats-card">
+                        <div class="stat-item">
+                            <span class="stat-label">Founded in</span>
+                            <span class="stat-value" data-count="1870">0</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-label">Campus Size</span>
+                            <span class="stat-value"><span data-count="119">0</span> Acres</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-label">Student Strength</span>
+                            <span class="stat-value"><span data-count="2000">0</span>+</span>
+                        </div>
+                    </div>
+
+
+                    <!-- Founder Card -->
+                    <div class="founder-card">
+                        <div class="founder-image">
+                            <img src="https://images.unsplash.com/photo-1509803874385-db7c23652552?w=600&h=700&fit=crop" alt="Sir Henry Dermot Daly Portrait" loading="lazy">
+                        </div>
+                        <h3>The Founder</h3>
+                        <p>Sir Henry Dermot Daly was born at Kirkee, near Poona, on 25th October 1823. His father, Francis Dermot Daly, was a soldier and served in British Indian from 1821 in the 4th Light Dragoons.</p>
+                        <p>Sir Daly was a keen student of history and delved deep into the Maratha period.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Publications Section -->
+        <section class="publications" id="publications">
+            <div class="container">
+                <h2 class="section-title-white">Read. Discover. Connect.</h2>
+                <p class="section-subtitle-white">Experience Daly College Through Our Publications.</p>
+               
+                <div class="publications-grid">
+                    <div class="publication-card">
+                        <div class="publication-preview newsletter">
+                            <div class="newsletter-mockup">
+                                <div class="newsletter-header">
+                                    <strong>THE DALIAN</strong>
+                                    <p>The Daly College Newsletter</p>
+                                </div>
+                                <div class="newsletter-content">
+                                    <div class="newsletter-line"></div>
+                                    <div class="newsletter-line"></div>
+                                    <div class="newsletter-line short"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="publication-info">
+                            <h3>Read Our Newsletter</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="publication-card featured">
+                        <div class="publication-preview brochure">
+                            <div class="brochure-mockup">
+                                <svg width="100" height="100" viewBox="0 0 100 100" fill="white">
+                                    <path d="M20 20 L50 50 L80 20 M50 50 L50 80" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="publication-info">
+                            <h3>Download Brochure</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="publication-card">
+                        <div class="publication-preview magazine">
+                            <div class="magazine-mockup">
+                                <div class="magazine-cover">
+                                    <div class="magazine-title">
+                                        <span>THE</span>
+                                        <span>DALIAN</span>
+                                    </div>
+                                    <div class="magazine-year">2023-24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="publication-info">
+                            <h3>Explore DC Magazine</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Announcements -->
+        <section class="announcements" id="announcements">
+            <div class="container">
+                <h2 class="section-title">DC Announcements</h2>
+                <p class="section-subtitle">Stay ahead with real-time updates and notices from Daly College administration.</p>
+               
+                <div class="announcement-filters">
+                    <button class="filter-btn active" data-filter="all">Important Notices</button>
+                    <button class="filter-btn" data-filter="junior">Junior School Byte</button>
+                    <button class="filter-btn" data-filter="calendar">Academic Calendar</button>
+                </div>
+               
+                <div class="announcements-carousel">
+                    <button class="carousel-nav prev" aria-label="Previous announcements">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                   
+                    <div class="announcements-track">
+                        <div class="announcement-item" data-category="important">
+                            <div class="announcement-date">
+                                <span class="month">Feb</span>
+                                <span class="day">10</span>
+                            </div>
+                            <p class="announcement-text">Notice: All students must submit their updated emergency-contact forms to the office by Feb 15.</p>
+                        </div>
+
+
+                        <div class="announcement-item" data-category="important">
+                            <div class="announcement-date">
+                                <span class="month">Feb</span>
+                                <span class="day">08</span>
+                            </div>
+                            <p class="announcement-text">Campus will remain closed on Feb 14 (Friday) due to scheduled maintenance. Plan accordingly.</p>
+                        </div>
+
+
+                        <div class="announcement-item" data-category="junior">
+                            <div class="announcement-date">
+                                <span class="month">Feb</span>
+                                <span class="day">07</span>
+                            </div>
+                            <p class="announcement-text">Junior School: Inter-house Quiz Olympiad for Classes IV–VI kicks off on Feb 19. Register by Feb 12.</p>
+                        </div>
+
+
+                        <div class="announcement-item" data-category="junior">
+                            <div class="announcement-date">
+                                <span class="month">Feb</span>
+                                <span class="day">07</span>
+                            </div>
+                            <p class="announcement-text">Junior School: Parent-Teacher meeting for Classes III–V rescheduled to Saturday, Feb 22 (10 AM).</p>
+                        </div>
+
+
+                        <div class="announcement-item active" data-category="calendar">
+                            <div class="announcement-date">
+                                <span class="month">Feb</span>
+                                <span class="day">06</span>
+                            </div>
+                            <p class="announcement-text">CBSE: Annual Examination Syllabus (Classes VII to XI) has been released. Check the portal.</p>
+                        </div>
+
+
+                        <div class="announcement-item" data-category="calendar">
+                            <div class="announcement-date">
+                                <span class="month">Feb</span>
+                                <span class="day">05</span>
+                            </div>
+                            <p class="announcement-text">CI: Annual Examination Time Table 2024-25 for Cambridge-stream students is now live.</p>
+                        </div>
+
+
+                        <div class="announcement-item" data-category="calendar">
+                            <div class="announcement-date">
+                                <span class="month">Feb</span>
+                                <span class="day">02</span>
+                            </div>
+                            <p class="announcement-text">Annual Examination Time Table 2024-25 (Classes X and XII) — admit cards available from Feb 10.</p>
+                        </div>
+                    </div>
+                   
+                    <button class="carousel-nav next" aria-label="Next announcements">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+               
+            
+            </div>
+        </section>
+
+
+        <!-- Campus & Infrastructure Section -->
+        <section class="campus" id="campus">
+            <div class="container">
+                <h2 class="section-title">Our Campus & Infrastructure</h2>
+                <p class="section-subtitle">Explore our state-of-the-art academic, residential, and sports facilities.</p>
+               
+                <div class="campus-carousel">
+                    <button class="carousel-nav prev" aria-label="Previous facilities">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                   
+                    <div class="campus-track">
+                        <div class="campus-item campus-side">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=900&fit=crop" alt="Hospital Facility" loading="lazy">
+                            <div class="campus-overlay-side">
+                                <h3>Hospital</h3>
+                            </div>
+                        </div>
+                       
+                        <div class="campus-item campus-side">
+                            <img src="https://images.unsplash.com/photo-1769614923544-1a147f778ea6?q=80&w=767&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Student Mess" loading="lazy">
+                            <div class="campus-overlay-side">
+                                <h3>Mess for Students</h3>
+                            </div>
+                        </div>
+                       
+                        <div class="campus-item campus-main">
+                            <img src="https://images.unsplash.com/photo-1565992441121-4367c2967103?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sports Facilities" loading="lazy">
+                            <div class="campus-overlay">
+                                <h3>Sports Facilities</h3>
+                                <p>DC has world class facilities for sports namely, two cricket grounds which have hosted Ranji Trophy matches, Floodlit Deco Turf Tennis Courts</p>
+                            </div>
+                        </div>
+                       
+                        <div class="campus-item campus-side">
+                            <img src="https://images.unsplash.com/photo-1639772823849-6efbd173043c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Science Laboratories" loading="lazy">
+                            <div class="campus-overlay-side">
+                                <h3>Laboratories</h3>
+                            </div>
+                        </div>
+                       
+                       
+                        <div class="campus-item campus-side">
+                            <img src="https://images.unsplash.com/photo-1751727262224-89f216e048ab?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Student Mess" loading="lazy">
+                            <div class="campus-overlay-side">
+                                <h3>Mess for Students</h3>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="campus-item campus-side">
+                            <img src="https://images.unsplash.com/photo-1731834452405-a472facfae95?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHllY2hub2xvZ3klMjBjb21wdXRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Technology Center" loading="lazy">
+                            <div class="campus-overlay-side">
+                                <h3>Technology Center</h3>
+                            </div>
+                        </div>
+                    </div>                  
+                   
+                    <button class="carousel-nav next" aria-label="Next facilities">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Latest News Section - 6 News Items -->
+        <section class="news" id="news">
+            <div class="container">
+                <h2 class="section-title">Latest News</h2>
+                <p class="section-subtitle">Discover the latest stories, achievements, and happenings from Daly College.</p>
+               
+                <div class="news-carousel">
+                    <button class="carousel-nav prev" aria-label="Previous news">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                   
+                    <div class="news-track">
+                        <article class="news-card">
+                            <div class="news-image">
+                                <div class="news-img-placeholder red">
+                                    <div class="news-badge">Congratulations</div>
+                                    <p>ARYAMAN TEKRIWAL</p>
+                                    <small>Cornell University, USA</small>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <h3>Aryaman Tekriwal to Cornell for Material Science!</h3>
+                                <p>Daly College proudly announces that Aryaman Tekriwal has secured a coveted place at the prestigious Cornell University for Material Science.</p>
+                                <div class="news-meta">
+                                    <span class="news-date">25 JAN 2025</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                       
+                        <article class="news-card">
+                            <div class="news-image">
+                                <div class="news-img-placeholder blue">
+                                    <div class="news-badge">Champion</div>
+                                    <p>Inter-School Olympics 2025</p>
+                                    <small>Table Tennis Gold</small>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <h3>Podium Perfect! Aarvi Secures the Gold!</h3>
+                                <p>Aarvi Jain has struck gold and brought home a trophy at the Inter-School Junior Olympics 2025 Table Tennis Championship.</p>
+                                <div class="news-meta">
+                                    <span class="news-date">25 JAN 2025</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                       
+                        <article class="news-card">
+                            <div class="news-image">
+                                <div class="news-img-placeholder green">
+                                    <div class="news-badge">Achievement</div>
+                                    <p>SUSTAINABILITY AWARD</p>
+                                    <small>Green Campus Initiative</small>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <h3>DC Wins National Green Campus Award 2025</h3>
+                                <p>Daly College has been honored with the prestigious National Green Campus Award for outstanding efforts in environmental sustainability.</p>
+                                <div class="news-meta">
+                                    <span class="news-date">22 JAN 2025</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                       
+                        <article class="news-card">
+                            <div class="news-image">
+                                <div class="news-img-placeholder purple">
+                                    <div class="news-badge">Cultural</div>
+                                    <p>ANNUAL DAY 2025</p>
+                                    <small>Grand Celebration</small>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <h3>Spectacular Annual Day Celebration!</h3>
+                                <p>The Annual Day 2025 showcased incredible performances by our talented students, celebrating a year of achievements and growth.</p>
+                                <div class="news-meta">
+                                    <span class="news-date">20 JAN 2025</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                       
+                        <article class="news-card">
+                            <div class="news-image">
+                                <div class="news-img-placeholder orange">
+                                    <div class="news-badge">Academic</div>
+                                    <p>CBSE RESULTS</p>
+                                    <small>100% Pass Rate</small>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <h3>Outstanding CBSE Board Results 2024-25!</h3>
+                                <p>DC students achieve remarkable success with 100% pass rate and multiple toppers in CBSE Class XII examinations.</p>
+                                <div class="news-meta">
+                                    <span class="news-date">18 JAN 2025</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                       
+                        <article class="news-card">
+                            <div class="news-image">
+                                <div class="news-img-placeholder teal">
+                                    <div class="news-badge">Innovation</div>
+                                    <p>TECH FEST 2025</p>
+                                    <small>Innovation Hub</small>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <h3>DC Tech Fest: Future Innovators Shine!</h3>
+                                <p>Students showcase groundbreaking projects at the annual Tech Fest, demonstrating excellence in robotics, AI, and coding.</p>
+                                <div class="news-meta">
+                                    <span class="news-date">15 JAN 2025</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                   
+                    <button class="carousel-nav next" aria-label="Next news">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+               
+                
+            </div>
+        </section>
+
+
+        <!-- Moments @ Daly Gallery Section -->
+        <section class="moments" id="moments">
+            <div class="container">
+                <h2 class="section-title">Moments @ Daly</h2>
+                <p class="section-subtitle">Explore events, achievements, and everyday moments that define us.</p>
+               
+                <div class="moments-filters">
+                    <button class="filter-btn active" data-gallery="photo">Photo Gallery</button>
+                    <button class="filter-btn" data-gallery="video">Video Gallery</button>
+                    <button class="filter-btn" data-gallery="print">Print Media</button>
+                </div>
+               
+                <div class="moments-carousel">
+                    <button class="carousel-nav prev" aria-label="Previous moments">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                   
+                    <div class="moments-track">
+                        <div class="moment-item">
+                            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=900&h=600&fit=crop" alt="Student Assembly" loading="lazy">
+                            <div class="moment-overlay">
+                                <p>Student Assembly</p>
+                            </div>
+                        </div>
+                       
+                        <div class="moment-item">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&h=600&fit=crop" alt="Award Ceremony" loading="lazy">
+                            <div class="moment-overlay">
+                                <p>Award Ceremony</p>
+                            </div>
+                        </div>
+                       
+                        <div class="moment-item">
+                            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&h=600&fit=crop" alt="Water Sports" loading="lazy">
+                            <div class="moment-overlay">
+                                <p>Water Sports</p>
+                            </div>
+                        </div>
+                       
+                        <div class="moment-item featured">
+                            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=900&h=600&fit=crop" alt="Gardens by the Bay" loading="lazy">
+                            <div class="moment-overlay-featured">
+                                <div class="moment-title">Gardens by the Bay</div>
+                            </div>
+                        </div>
+                       
+                        <div class="moment-item">
+                            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=600&fit=crop" alt="Sports Day" loading="lazy">
+                            <div class="moment-overlay">
+                                <p>Sports Day</p>
+                            </div>
+                        </div>
+                       
+                        <div class="moment-item">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=600&fit=crop" alt="Science Exhibition" loading="lazy">
+                            <div class="moment-overlay">
+                                <p>Science Exhibition</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <button class="carousel-nav next" aria-label="Next moments">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#about">Principal's Desk</a></li>
+                        <li><a href="#about">Prefects and Captains</a></li>
+                        <li><a href="#about">Synopsis on DC</a></li>
+                        <li><a href="#about">Alumni / ODA</a></li>
+                        <li><a href="#about">Campus</a></li>
+                        <li><a href="#about">Facilities</a></li>
+                        <li><a href="#about">Location</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>History</h3>
+                    <ul>
+                        <li><a href="#about">Evolution</a></li>
+                        <li><a href="#about">Founder of DC</a></li>
+                        <li><a href="#about">Presidents of the Board</a></li>
+                        <li><a href="#about">Original Donors</a></li>
+                        <li><a href="#about">Patrons of the College</a></li>
+                        <li><a href="#about">Principals at DC</a></li>
+                        <li><a href="#about">First Batch</a></li>
+                        <li><a href="#about">The College Coat of Arms</a></li>
+                        <li><a href="#about">Visits of Dignitaries</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Admission</h3>
+                    <ul>
+                        <li><a href="#admissions">Admission Procedure</a></li>
+                        <li><a href="#admissions">E-Brochure</a></li>
+                        <li><a href="#admissions">Fee Structure</a></li>
+                        <li><a href="#admissions">Registration</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Academics</h3>
+                    <ul>
+                        <li><a href="#academics">Committee</a></li>
+                        <li><a href="#academics">Mandatory Disclosure</a></li>
+                        <li><a href="#academics">Transfer Certificate</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column">
+                    <h3>Career & College Guidance</h3>
+                    <ul>
+                        <li><a href="#career">Career Guidance Activities</a></li>
+                        <li><a href="#career">ICS Career Login</a></li>
+                        <li><a href="#career">Placement Records</a></li>
+                        <li><a href="#career">Career Guidance Calendar</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Daly College Indore</p>
+                    <div class="footer-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Use</a>
+                        <a href="#sitemap">Sitemap</a>
+                    </div>
+                </div>
+               
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+
+
+    <!-- Accessibility Voice Button -->
+    <button class="voice-assist" aria-label="Voice assistance">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+        </svg>
+    </button>
+
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
